@@ -38,7 +38,7 @@ class GuessThesecret_number:
                 
                 if not self.has_won(guess):
                     print("sorry You lost the game")
-                    break
+                break
             else:
                 
                 if self.has_won(guess):
