@@ -6,7 +6,7 @@ print("++++++++++++++++++++++++++++++++++++++++++\n+++++  Guess the secret numbe
 
 print("The number is between 1 to 100 range \n")
 number_of_attempts = 0
-max_number_of_attemps = 10
+max_number_of_attemps = 3
 
 while (number_of_attempts < max_number_of_attemps):
     
@@ -24,6 +24,6 @@ while (number_of_attempts < max_number_of_attemps):
         else:
             print("Your guess is lower than our secret number")
 
-if(number_of_attempts == 5):
+if(number_of_attempts == max_number_of_attemps):
     print("Maximum attemps reached, Sorry you lost")
         
