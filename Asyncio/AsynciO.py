@@ -2,50 +2,59 @@ import asyncio
 
 # async def main():
     
-#         print("Hello..")
+#         print("\nHello..\n")
 #         await asyncio.sleep(2)
-#         print("Hello after 2 seconds")
+#         print("\nHello after 2 seconds\n")
     
 # asyncio.run_forever(main())  
+
 #=====================================================
 # Tech with Tim
 #---------------
 # 1. for writing asynchronous code we need to write a coroutine
 # 2. and that is written with the async keyword befor the function name
 # 3. next we need to define an event loop and execute it. 
-# 4. create task for non writing non blocking code. 
+# 4. create task for writing non blocking code. 
 
 # async def main():
 #     await asyncio.sleep(2)
-#     print("main is called")
+#     print("\nmain is called\n")
     
 # async def main_caller(): 
-#     print("main caller is called")
+#     print("\nmain caller is called\n")
 #     await main()
-#     print("call to main has been made but it will not execute until main finishes ")
+#     print("\ncall to main has been made but it will not execute until main finishes \n")
     
 # asyncio.run(main_caller())
+
 #++++++++++++++++++++++++++++++++++++++++++++++++
-# async def main():
-#     await asyncio.sleep(2)
-#     print("main is called , I will execute at the last even though I was 2nd in posiion")
+
+# ************** C R E A T I N G   T A S K *****************8**
+
+async def main():
+
+    await asyncio.sleep(2)
+    print("\nmain is called , I will execute at the last even though I was 2nd in posiion\n")
     
-# async def main_caller(): 
-#     print("main caller is called")
-#     task = asyncio.create_task(main()) 
-#     print("call to main has been made, main will take 2 seconds but this will execute before main finishes to run ")
+async def main_caller(): 
+
+    print("\nmain caller is called\n")
+    task = asyncio.create_task(main()) 
+    print("\ncall to main has been made, main will take 2 seconds but this will execute before main finishes to run \n")
      
-# asyncio.run(main_caller())
+asyncio.run(main_caller())
+
 #+++++++++++++++++++++++++++++++++++++++++++++++++
+
 # async def main():
 #     await asyncio.sleep(2)
-#     print("main is called , I will execute at the 2nd posiion")
+#     print("\nmain is called , I will execute at the 2nd posiion\n")
     
 # async def main_caller(): 
-#     print("main caller is called")
+#     print("\nmain caller is called\n")
 #     task = asyncio.create_task(main()) 
 #     await task
-#     print("call to main has been made,Now I will execute at the last ")
+#     print("\ncall to main has been made,Now I will execute at the last \n")
      
 # asyncio.run(main_caller())
 #+++++++++++++++++++++++++++++++++++++++++++++++++
@@ -54,40 +63,41 @@ import asyncio
     
 #     await asyncio.sleep(2)
     
-#     print("main is called , I will execute at the 2nd in posiion")
+#     print("\nmain is called , I will execute at the 2nd in posiion\n")
     
 # async def main_caller(): 
     
-#     print("main_caller is called")
+#     print("\nmain_caller is called\n")
     
 #     task = asyncio.create_task(main()) 
     
 #     await asyncio.sleep(4)
     
-#     print("call to main has been made, main will take 2 seconds but this , I will execute at the last ")
+#     print("\ncall to main has been made, main will take 2 seconds but this , I will execute at the last \n")
      
 # asyncio.run(main_caller())
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-async def main():
+# async def main():
     
-    print("main is called , I will execute at 2ND PLACE")
+#     print("\nmain is called , I will execute at 2ND PLACE\n")
     
-    await asyncio.sleep(4)
-    print( "4 seconds completed ")    # This line doesn't get printed is await is not written at
-#-                                      at the last in main_calller
+#     await asyncio.sleep(4)
     
-async def main_caller(): 
+#     print( "4 seconds completed \n")    # This line doesn't get printed is await is not written at
+# #-                                      at the last in main_calller
     
-    print("main_caller is called")
+# async def main_caller(): 
     
-    task = asyncio.create_task(main()) 
+#     print("\nmain_caller is called\n")
     
-    await asyncio.sleep(2)
+#     task = asyncio.create_task(main()) 
     
-    print("call to main has been made, main will take 4 seconds but this , I will execute at LAST")
+#     await asyncio.sleep(2)
     
-    await task
+#     print("\ncall to main has been made, main will take 4 seconds but this , I will execute at LAST\n")
+    
+#     await task
      
-asyncio.run(main_caller())
+# asyncio.run(main_caller())
